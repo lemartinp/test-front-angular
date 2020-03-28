@@ -1,0 +1,15 @@
+<div class="main">
+    <h2>Welcome to your favorite transactions app!</h2>
+    <mat-form-field appearance="fill" class="form">
+      <mat-label>Email</mat-label>
+      <input matInput [(ngModel)]="username">
+    </mat-form-field>
+    <br>
+    <mat-form-field appearance="fill" class="form">
+        <mat-label>Contraseña</mat-label>
+        <input matInput [(ngModel)]="password" type="password">
+      </mat-form-field>
+    <br>
+    <button mat-button (click)="login()">Ingresar</button>
+  </div>
+  

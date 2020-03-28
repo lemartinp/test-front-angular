@@ -1,0 +1,26 @@
+<div *ngIf="data.type === 'missing'" class="main">
+    Por favor ingresa el nombre de usuario y contraseña.
+</div>
+<div *ngIf="data.type === 'incorrect'" class="main">
+    Usuario o contraseña incorrectos.
+</div>
+<div *ngIf="data.type === 'serverError'" class="main">
+    Lo sentimos, error en el servidor.
+</div>
+<div *ngIf="data.type === 'info'" class="main">
+    <mat-list>
+        <div class="sub-header" mat-subheader>Detalle de la Transacción</div>
+        <mat-list-item>
+          <div> Valor de la transacción: <span>{{data.value | currency}}</span></div>
+        </mat-list-item>
+        <mat-list-item>
+            <div> Puntos de la transacción: <span>{{data.points}}</span></div>
+        </mat-list-item>
+        <mat-list-item>
+            <div> Tipo de transacción: <span>{{data.transType === 'earn'? 'Puntos recibidos': 'Puntos redimidos'}}</span></div>
+        </mat-list-item>
+        <mat-list-item>
+            <div> Fecha y hora: <span>{{data.createdDate | date:"medium"}}</span></div>
+        </mat-list-item>
+    </mat-list>
+</div>

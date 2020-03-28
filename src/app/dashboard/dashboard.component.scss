@@ -1,0 +1,38 @@
+.main{
+    padding: 5% 20%;
+    mat-list-item:hover{
+        background-color: rgb(237, 219, 240);
+    }
+    mat-icon{
+        color: rgb(126, 46, 122);
+    }
+    .sub-header{
+        color: rgb(121, 83, 119);
+        font-size: 20px;
+    }
+    mat-selection-list{
+        display: flex;
+    }
+}
+.header{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    text-align: center;
+    justify-content: center;
+    padding: 1% 20%;
+    background-image: linear-gradient(120deg, #e0c3fc 0%, #8ec5fc 100%);
+    button{
+        color: rgb(126, 46, 122);
+        min-width: 200px;
+        margin: 5px;
+    }
+    .form{
+        width: 20%;
+        margin: 0px 5px;
+        min-width: 300px;
+    }
+    .input{
+        display: flex;
+    }
+}

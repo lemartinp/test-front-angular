@@ -1,0 +1,22 @@
+<div class="header">
+  <mat-form-field appearance="fill" class="form">
+    <mat-label>Fecha inicio (YYYY-MM-DD)</mat-label>
+    <input matInput [(ngModel)]="startDate">
+  </mat-form-field>
+  <mat-form-field appearance="fill" class="form">
+      <mat-label>Fecha fin (YYYY-MM-DD)</mat-label>
+      <input matInput [(ngModel)]="endDate">
+  </mat-form-field>
+  <button mat-button (click)="filter()">Filtrar</button>
+</div>
+<div class="main">
+  <mat-list>
+    <div class="sub-header" mat-subheader>Transacciones</div>
+    <mat-list-item (click)="showDetail(transaction)" *ngFor="let transaction of transactions">
+      <mat-icon mat-list-icon *ngIf="transaction.type === 'redeem'; else elseIcon">check_circle</mat-icon>
+      <ng-template #elseIcon><mat-icon mat-list-icon>local_hospital</mat-icon></ng-template>
+      <div mat-line>Puntos de la transacción: {{transaction.points}}</div>
+      <div mat-line> {{transaction.createdDate | date}} </div>
+    </mat-list-item>
+  </mat-list>
+</div>
