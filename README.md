@@ -52,3 +52,7 @@ La clase LoginData es solamente usada para hacer el post de login al API.
 ## Responsive
 
 La aplicación fue desarrollada teniendo en cuenta que es Mobile First. Por lo cual, si se hace un resize de la pantalla podrá apreciarse lo responsive de la aplicación.
+
+## Unit testing
+
+Si se corre el comando "ng test" se mostrará el resultado de algunos unit tests hechos a los componentes. El código de estos tests está en los correspondientes archivos ".spec.ts" de cada componente.
