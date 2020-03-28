@@ -31,7 +31,6 @@ export class DashboardComponent implements OnInit {
   ngOnInit() {
     this.requestsService.getTransactions(sessionStorage.getItem('token')).subscribe((response) => {
       this.transactions = response['data'].map((transaction) => ({...transaction, createdDate: new Date(`${transaction.createdDate}`)}));
-      console.log(JSON.stringify(this.transactions));
     });
   }
   
